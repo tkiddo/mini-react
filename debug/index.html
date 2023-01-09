@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./didact.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const element = Didact.createElement(
+        'div',
+        { id: 'foo' },
+        Didact.createElement('a', null, 'bar'),
+        Didact.createElement('b')
+      )
+
+      const container = document.getElementById('root')
+      Didact.render(element, container)
+    </script>
+  </body>
+</html>
