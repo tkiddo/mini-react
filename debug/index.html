@@ -14,7 +14,12 @@
         'div',
         { id: 'foo' },
         Didact.createElement('a', null, 'bar'),
-        Didact.createElement('b')
+        Didact.createElement(
+          (props) => {
+            return Didact.createElement('h1', null, props.title)
+          },
+          { title: 'foo' }
+        )
       )
 
       const container = document.getElementById('root')
