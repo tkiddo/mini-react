@@ -1,4 +1,4 @@
-import { createReactElement } from '../lib/element'
+import { createReactElement } from '../lib'
 
 test('createReactElement', () => {
   const element = createReactElement('div', { className: 'foo' }, 'bar')
